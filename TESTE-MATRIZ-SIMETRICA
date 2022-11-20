@@ -1,0 +1,33 @@
+# Também disponívem em: https://replit.com/@IaraMelo/Matriz-simetrica-python#main.py
+# Youtube: 
+
+print("SEJA BEM VNDO(A)".center(30, " "), "\n")
+print("\nQUESTÃO 3\n\n")
+dimensao = int(input("Insira o tamanho da matriz:")) # recebe a dimensão n da matriz
+
+matriz = [] # cria a matriz
+
+for linha in range(dimensao):
+    lista_matriz = []
+    for elemento in range(dimensao):
+        numero = int(input("Insira um número: "))
+        lista_matriz.append(numero) # adiciona o valor à lista
+    matriz.append(lista_matriz) # adiciona a linha na matriz
+
+for lista in matriz: # descomentar para ver a matriz
+    print(lista)
+
+
+simetria_teste = 0 # positiva é simetrica | se negativa não é simetrica
+for linha in range(len(matriz)):
+    for coluna in range(len(matriz)):
+        if matriz[linha][coluna] == matriz[coluna][linha]: # ex: se posião [0,1] == [1,0]
+            simetria_teste+=10 # adiciono - para deixar positiva
+        else: # se houver diferença - [0,1] != [1,0]
+            simetria_teste-=20 # subtraio - apenas para manter negativa
+
+# se variável é positiva (simétrica) ou não (não simetrica)
+if simetria_teste >= 0:
+    print("É simétrica")
+elif simetria_teste < 0:
+    print("Não simétrica")
