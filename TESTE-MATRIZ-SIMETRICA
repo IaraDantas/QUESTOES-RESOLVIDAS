@@ -1,9 +1,8 @@
 # Também disponívem em: https://replit.com/@IaraMelo/Matriz-simetrica-python#main.py
 # Youtube: 
+print("SEJA BEM VINDO(A)".center(30, " "), "\n")
 
-print("SEJA BEM VNDO(A)".center(30, " "), "\n")
-print("\nQUESTÃO 3\n\n")
-dimensao = int(input("Insira o tamanho da matriz:")) # recebe a dimensão n da matriz
+dimensao = int(input("Insira a dimensão da matriz:")) # recebe a dimensão n da matriz
 
 matriz = [] # cria a matriz
 
@@ -30,4 +29,4 @@ for linha in range(len(matriz)):
 if simetria_teste >= 0:
     print("É simétrica")
 elif simetria_teste < 0:
-    print("Não simétrica")
+    print("Não é simétrica")
